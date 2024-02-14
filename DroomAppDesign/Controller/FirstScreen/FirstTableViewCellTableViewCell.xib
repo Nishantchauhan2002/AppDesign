@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="FirstTableViewCellTableViewCell" customModule="DroomAppDesign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstMain.png" translatesAutoresizingMaskIntoConstraints="NO" id="g0d-dk-Nz6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="650"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="650" id="hig-PP-wyH"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLN-BK-lN8">
+                        <rect key="frame" x="20" y="35" width="335" height="41"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Car,Bike &amp; Scooter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qen-aG-l4e">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppu-e4-mfb">
+                                <rect key="frame" x="285" y="8" width="50" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Mrh-Uz-8qa"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktn-hO-6Vw">
+                                <rect key="frame" x="0.0" y="3" width="335" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="ppu-e4-mfb" firstAttribute="top" secondItem="cLN-BK-lN8" secondAttribute="top" constant="8" id="Ktc-qe-d3C"/>
+                            <constraint firstAttribute="trailing" secondItem="qen-aG-l4e" secondAttribute="trailing" id="OYT-dB-zSz"/>
+                            <constraint firstAttribute="bottom" secondItem="qen-aG-l4e" secondAttribute="bottom" id="Yda-x4-0ea"/>
+                            <constraint firstAttribute="bottom" secondItem="ppu-e4-mfb" secondAttribute="bottom" constant="8" id="eqx-RI-uJe"/>
+                            <constraint firstItem="ppu-e4-mfb" firstAttribute="leading" secondItem="cLN-BK-lN8" secondAttribute="leading" constant="285" id="mk6-CZ-V3g"/>
+                            <constraint firstItem="qen-aG-l4e" firstAttribute="leading" secondItem="cLN-BK-lN8" secondAttribute="leading" id="pjQ-iN-St7"/>
+                            <constraint firstAttribute="trailing" secondItem="ppu-e4-mfb" secondAttribute="trailing" id="xoE-8g-hda"/>
+                            <constraint firstItem="qen-aG-l4e" firstAttribute="top" secondItem="cLN-BK-lN8" secondAttribute="top" id="ziZ-Qd-wDM"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR DREAM VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="53T-6r-tMW">
+                        <rect key="frame" x="50" y="84" width="275" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Just A Few Miles Away" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCz-so-DoI">
+                        <rect key="frame" x="30" y="114" width="315" height="20"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                        <color key="textColor" red="0.0067851063795387745" green="0.50044804811477661" blue="0.99093800783157349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ0-Cf-seg">
+                        <rect key="frame" x="80" y="178" width="215" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="AtZ-Qp-vbU"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                            <backgroundConfiguration key="background">
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.85261000071140314" colorSpace="custom" customColorSpace="sRGB"/>
+                            </backgroundConfiguration>
+                            <attributedString key="attributedTitle">
+                                <fragment content="Create Requirement">
+                                    <attributes>
+                                        <font key="NSFont" size="18" name="Helvetica"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="CCz-so-DoI" secondAttribute="trailing" constant="10" id="0Dx-qb-apd"/>
+                    <constraint firstItem="g0d-dk-Nz6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Eb-Sb-txY"/>
+                    <constraint firstAttribute="trailing" secondItem="cLN-BK-lN8" secondAttribute="trailing" constant="20" id="C9y-qK-AqV"/>
+                    <constraint firstItem="CCz-so-DoI" firstAttribute="top" secondItem="53T-6r-tMW" secondAttribute="bottom" id="D7p-um-m42"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="53T-6r-tMW" secondAttribute="trailing" constant="30" id="FAL-SA-DjX"/>
+                    <constraint firstAttribute="trailing" secondItem="g0d-dk-Nz6" secondAttribute="trailing" id="JbK-4T-P8Z"/>
+                    <constraint firstItem="jQ0-Cf-seg" firstAttribute="top" secondItem="CCz-so-DoI" secondAttribute="bottom" constant="44" id="NV0-2M-FE3"/>
+                    <constraint firstItem="cLN-BK-lN8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="NWZ-ow-6Pr"/>
+                    <constraint firstItem="CCz-so-DoI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="QgZ-QG-Khj"/>
+                    <constraint firstItem="cLN-BK-lN8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="R94-ZH-poB"/>
+                    <constraint firstItem="53T-6r-tMW" firstAttribute="top" secondItem="cLN-BK-lN8" secondAttribute="bottom" constant="8" id="TWh-ud-Bo4"/>
+                    <constraint firstItem="g0d-dk-Nz6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Wex-PV-jEy"/>
+                    <constraint firstItem="jQ0-Cf-seg" firstAttribute="top" secondItem="CCz-so-DoI" secondAttribute="bottom" constant="44" id="XYG-Pa-XZI"/>
+                    <constraint firstItem="53T-6r-tMW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="aAD-zX-2vZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jQ0-Cf-seg" secondAttribute="trailing" constant="60" id="eIa-gV-fbc"/>
+                    <constraint firstAttribute="bottom" secondItem="g0d-dk-Nz6" secondAttribute="bottom" id="oMo-jD-5Yu"/>
+                    <constraint firstItem="jQ0-Cf-seg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="60" id="rvd-dr-v8y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="createRequirementbutton" destination="jQ0-Cf-seg" id="4vK-Lp-qoQ"/>
+                <outlet property="mainImage" destination="g0d-dk-Nz6" id="V4o-Jy-0dO"/>
+                <outlet property="searchButton" destination="ktn-hO-6Vw" id="LOF-4U-UTm"/>
+                <outlet property="searchTextField" destination="qen-aG-l4e" id="Naz-me-8Q3"/>
+                <outlet property="searchView" destination="cLN-BK-lN8" id="9Kq-AB-aVv"/>
+            </connections>
+            <point key="canvasLocation" x="173.18840579710147" y="3.3482142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FirstMain.png" width="1125" height="1464"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
