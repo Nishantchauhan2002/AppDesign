@@ -7,9 +7,10 @@
 
 import UIKit
 
-class AutoMobileInspectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout {
+class AutoMobileInspectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate {
    
 
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var inspectionImage: UIImageView!
     @IBOutlet weak var ServicecollectionView: UICollectionView!
@@ -21,15 +22,13 @@ class AutoMobileInspectionTableViewCell: UITableViewCell, UICollectionViewDelega
         super.awakeFromNib()
         ServicecollectionView.delegate=self
         ServicecollectionView.dataSource=self
-        pageControl.numberOfPages=5
-        pageControl.currentPage=0
-        
-       
-        ServicecollectionView.register(UINib(nibName: "ServiceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ServiceCollectionViewCell")
+//        progressView.progress=0.21
+  
+       ServicecollectionView.register(UINib(nibName: "ServiceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ServiceCollectionViewCell")
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,7 +44,19 @@ class AutoMobileInspectionTableViewCell: UITableViewCell, UICollectionViewDelega
         return CGSize(width: collectionViewWidth, height: collectionViewHeight)
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        pageControl.currentPage=indexPath.row
+//        pageControl.currentPage=indexPath.row
         
+    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetX = scrollView.contentOffset.x
+            let collectionViewWidth = scrollView.frame.width
+            let totalContentWidth = scrollView.contentSize.width
+            let scrollPercentage = contentOffsetX / (totalContentWidth - collectionViewWidth)
+            updateTheProgressView(with: scrollPercentage)
+    }
+    func updateTheProgressView(with percentage:CGFloat){
+        print(percentage)
+        let progress=max(0,min(1,percentage))
+        progressView.setProgress(Float(progress), animated: true)
     }
 }

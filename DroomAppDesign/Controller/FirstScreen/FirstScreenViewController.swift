@@ -11,6 +11,8 @@ class FirstScreenViewController: UIViewController , UITableViewDelegate , UITabl
    var Expanded=false
     @IBOutlet weak var MaintableView: UITableView!
     var cellHeight=630;
+    let cgColorF8F8F8 = UIColor(red: 248/255.0, green: 248/255.0, blue: 248/255.0, alpha: 1.0)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,11 @@ class FirstScreenViewController: UIViewController , UITableViewDelegate , UITabl
         MaintableView.register(UINib(nibName: "LoanAndInsuranceTableViewCell", bundle: nil), forCellReuseIdentifier: "LoanAndInsuranceTableViewCell")
         MaintableView.register(UINib(nibName: "AutoMobileInspectionTableViewCell", bundle: nil), forCellReuseIdentifier: "AutoMobileInspectionTableViewCell")
         MaintableView.register(UINib(nibName: "ServiceCenterTableViewCell", bundle: nil), forCellReuseIdentifier: "ServiceCenterTableViewCell")
+        MaintableView.register(UINib(nibName: "AccessoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "AccessoriesTableViewCell")
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +52,13 @@ class FirstScreenViewController: UIViewController , UITableViewDelegate , UITabl
         else if indexPath.row==4{
             let cell:ServiceCenterTableViewCell=MaintableView.dequeueReusableCell(withIdentifier: "ServiceCenterTableViewCell")as!
             ServiceCenterTableViewCell
+            cell.backgroundColor = cgColorF8F8F8
             return cell
+        }else if indexPath.row==5{
+//            let cell:AccessoriesTableViewCell=MaintableView.dequeueReusableCell(withIdentifier: "AccessoriesTableViewCell")
+//            as! AccessoriesTableViewCell
+//            cell.backgroundColor=cgColorF8F8F8
+//            return cell
         }
         return UITableViewCell()
         
@@ -68,7 +77,9 @@ class FirstScreenViewController: UIViewController , UITableViewDelegate , UITabl
         }else if indexPath.row==3{
             return 710
         }else if indexPath.row==4{
-            return 500
+            return 570
+        }else if indexPath.row==5{
+            return 550
         }
         return 0
     }

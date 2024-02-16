@@ -8,10 +8,16 @@
 import UIKit
 
 class ServiceCenterCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var midLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var imgLabel: UIImageView!
+    
+    @IBOutlet weak var cellView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cellView.layer.cornerRadius=12.0
     }
 
 }
